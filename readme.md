@@ -2,7 +2,7 @@
 
 A beautiful, Spotify Wrapped-inspired web application that generates comprehensive listening statistics from your Navidrome music server. Visualize your all-time music habits with interactive charts, top lists, and shareable summaries.
 
-🔗 [Live Demo]()
+🔗 [Live Site](https://mdeik.github.io/Navidrome-Wrapped/)
 
 
 
