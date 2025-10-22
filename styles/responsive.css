@@ -1,0 +1,167 @@
+/* ----------  RESPONSIVE  ---------- */
+
+@media (max-width: 53.75rem) {
+  /* 860 px */
+  /* ===== WRAPPED VIEW ===== */
+  #welcomeStats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 48rem) {
+  /* ===== GLOBAL LAYOUT ===== */
+  body {
+    padding: var(--sp-sm);
+  }
+
+  .container {
+    border-radius: var(--r-lg);
+  }
+
+  /* ===== HEADER ===== */
+  header {
+    padding: var(--sp-xl) var(--sp-md);
+  }
+
+  header h1 {
+    font-size: var(--fs-3xl);
+  }
+
+  /* ===== CONTENT SECTIONS ===== */
+  .form-section,
+  .results-section,
+  .error-section,
+  .info-section {
+    padding: var(--sp-lg);
+  }
+
+  .section-title {
+    font-size: var(--fs-4xl);
+  }
+
+  /* ===== WRAPPED VIEW COMPONENTS ===== */
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #diversity-stats,
+  #summary-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .top-list-container {
+    grid-template-columns: 1fr;
+    gap: var(--sp-md);
+  }
+
+  .top-item {
+    height: auto;
+    min-height: 6.25rem;
+  }
+
+  .top-item-compact {
+    min-height: 3.75rem;
+  }
+
+  .rating-cards-horizontal {
+    grid-template-columns: 1fr;
+  }
+
+  .rating-horizontal-bar-container {
+    gap: var(--sp-sm);
+  }
+
+  .horizontal-rating-label {
+    min-width: 3.125rem;
+    font-size: var(--fs-xs);
+  }
+
+  .horizontal-rating-bar-wrapper {
+    height: 1.5625rem;
+  }
+
+  .horizontal-rating-percentage {
+    min-width: 2.5rem;
+    font-size: var(--fs-xs);
+  }
+
+  .summary-highlights {
+    gap: var(--sp-sm);
+  }
+
+  .highlight-card {
+    padding: var(--sp-sm);
+  }
+
+  .highlight-value {
+    font-size: var(--fs-2xl);
+  }
+
+  /* ===== NAVIGATION ===== */
+  .navigation {
+    bottom: var(--sp-sm);
+  }
+
+  .nav-btn {
+    width: 3.125rem;
+    height: 3.125rem;
+    font-size: var(--fs-xl);
+  }
+}
+
+@media (max-width: 30rem) {
+  /* ===== HEADER ===== */
+  header h1 {
+    font-size: var(--fs-2xl);
+  }
+
+  .subtitle {
+    font-size: var(--fs-base);
+  }
+
+  /* ===== CONTENT SECTIONS ===== */
+  .form-section,
+  .results-section,
+  .error-section,
+  .info-section {
+    padding: var(--sp-md);
+  }
+
+  /* ===== WRAPPED VIEW COMPONENTS ===== */
+  #welcomeStats {
+    grid-template-columns: 1fr;
+  }
+
+  .horizontal-rating-bar-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--sp-xs);
+  }
+
+  .horizontal-rating-label {
+    text-align: left;
+    min-width: auto;
+  }
+
+  .horizontal-rating-bar-wrapper {
+    height: 1.25rem;
+  }
+
+  .horizontal-rating-percentage {
+    text-align: left;
+    min-width: auto;
+  }
+
+  .compact-name {
+    font-size: var(--fs-sm);
+  }
+
+  .compact-detail {
+    font-size: var(--fs-xs);
+  }
+
+  .compact-plays {
+    font-size: var(--fs-xs);
+    min-width: 3rem;
+  }
+}

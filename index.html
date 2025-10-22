@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navidrome Wrapped</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/android/android-launchericon-192-192.png" sizes="192x192">
+    <meta name="theme-color" content="#667eea">
+
+  </head>
+  <body>
+    <!-- Login View -->
+    <div id="loginView" class="login-view">
+      <div class="container">
+        <header>
+          <h1>🎵 Navidrome Wrapped</h1>
+          <p class="subtitle">
+            Connect to your server to generate your all-time music statistics
+          </p>
+        </header>
+
+        <div id="resultsSection" class="results-section" style="display: none">
+          <div class="success-message">
+            <div class="success-icon">✅</div>
+            <p>Your All-Time Navidrome Wrapped is ready!</p>
+            <p>
+              <strong
+                >Click below to view your personalized wrapped
+                experience.</strong
+              >
+            </p>
+          </div>
+          <br />
+
+          <div style="margin-top: var(--sp-sm)">
+            <button
+              id="viewWrappedBtn"
+              class="generate-btn"
+              style="background: var(--mint); text-shadow: 0px 0px 1px black"
+            >
+              🎵 View Your Wrapped
+            </button>
+          </div>
+          <div class="quick-stats" id="quickStats"></div>
+        </div>
+
+        <div id="errorSection" class="error-section" style="display: none">
+          <div class="error-message">
+            <div class="error-icon">❌</div>
+            <h3 id="errorTitle">Connection Failed</h3>
+            <p id="errorMessage"></p>
+            <button id="retryBtn" class="secondary-btn">Try Again</button>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2 style="font-size: var(--fs-2xl); margin-bottom: var(--sp-lg)">
+            Server Connection
+          </h2>
+          <div class="form-group">
+            <label for="serverUrl">Server URL</label>
+            <input
+              type="url"
+              id="serverUrl"
+              placeholder="https://your-navidrome-server.com"
+            />
+            <small>Include http:// or https://</small>
+          </div>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Username" />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password" />
+          </div>
+
+          <button id="generateBtn" class="generate-btn">
+            <span class="btn-text">Generate All-Time Wrapped</span>
+            <span class="btn-loading" style="display: none">
+              <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+              </div>
+              <div class="progress-info">
+                <span class="progress-percent" id="progressPercent">0%</span>
+                <span class="progress-message" id="progressMessage"
+                  >Starting…</span
+                >
+              </div>
+              <div class="progress-details" id="progressDetails"></div>
+            </span>
+          </button>
+          <button id="demoBtn" class="secondary-btn">
+            🎭 Try Demo with Sample Data
+          </button>
+        </div>
+
+        <div class="info-section">
+          <h3 style="font-size: var(--fs-xl); margin-bottom: var(--sp-md)">
+            About
+          </h3>
+          <p>
+            This tool connects to your Navidrome server and generates
+            Spotify-Wrapped-like statistics about your all-time music listening
+            habits.
+          </p>
+          <p>
+            <strong>Note:</strong> Your credentials are processed locally and
+            never sent to any external server except your Navidrome instance.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wrapped View -->
+    <div id="wrappedView" class="wrapped-view">
+      <div class="wrapped-container">
+        <div id="wrappedContent"></div>
+        <div class="navigation">
+          <button id="prevBtn" class="nav-btn" disabled>←</button>
+          <button id="nextBtn" class="nav-btn">→</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts/md5.js"></script>
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/navidrome-client.js"></script>
+    <script src="scripts/wrapped-display.js"></script>
+    <script src="scripts/share-card.js"></script>
+    <script src="scripts/demo-data.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
